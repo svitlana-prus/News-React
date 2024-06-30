@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import Main from "./Layout/Main/main";
+import World from "./Layout/World/world";
+import Bbc from "./Layout/Bbc/bbc";
+import Footer from "./Layout/Footer/footer";
+import Layout from './Layout/Layout/layout';
+import { Routes, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ function App() {
+  return(
+    <div className="App">  
+       <Routes>
+          <Route path="/" element={<Layout />}>
+           <Route index element={<Main/>}/>
+            <Route path="/bbc" element={<Bbc />} />
+            <Route path="/world" element={<World />} />
+          </Route>
+      </Routes>
+      <Footer/>
+</div>
+   )
 }
-
-export default App;
+export default App

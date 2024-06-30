@@ -1,0 +1,33 @@
+.article{
+    display: grid;
+    gap: 20px;
+  }
+
+  .App {
+    font-family: sans-serif;
+    text-align: left;
+  }
+
+  @media (min-width: 576px) {
+  .article {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .article {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
